@@ -1,23 +1,23 @@
 ---
-name: Feature Request
-about: Suggest a new feature or enhancement for the calculator
+name: 機能リクエスト
+about: 電卓への新機能や改善の提案
 title: ''
 labels: enhancement
 assignees: ''
 ---
 
-## Feature Description
+## 機能の説明
 
-A clear and concise description of the feature you'd like to see.
+追加してほしい機能について明確かつ簡潔に説明してください。
 
-## Use Case
+## ユースケース
 
-Describe the use case or problem this feature would solve.
+この機能が解決するユースケースや問題を説明してください。
 
-## Proposed Solution
+## 提案する解決策
 
-How do you envision this feature working?
+この機能がどのように動作するか、あなたのイメージを教えてください。
 
-## Additional Context
+## その他のコンテキスト
 
-Add any other context, screenshots, or examples about the feature request here.
+機能リクエストに関するその他のコンテキスト、スクリーンショット、例などをここに追加してください。
