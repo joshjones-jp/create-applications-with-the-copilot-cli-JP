@@ -1,61 +1,61 @@
-# Create applications with the Copilot CLI
+# Copilot CLI でアプリケーションを作成する
 
-_Learn to use GitHub Copilot CLI—a standalone terminal application—for issue management and building a Node.js calculator application._
+_スタンドアロンのターミナルアプリケーションである GitHub Copilot CLI を使って、Issue の管理と Node.js 電卓アプリの開発を学びましょう。_
 
-## Welcome
+## ようこそ
 
-- **Who is this for**: Developers who want to learn how to use the standalone GitHub Copilot CLI to streamline their development workflow
-- **What you'll learn**: How to install and use GitHub Copilot CLI as a standalone terminal tool for creating issues, generating code, and collaborating interactively from the command line
-- **What you'll build**: A Node.js calculator app using Copilot CLI for project setup, issue management, and collaborative development
-- **Prerequisites**:
-  - Familiarity with basic command line (CLI) operations
-  - Basic knowledge of GitHub repositories
-  - Node.js version 22 or later (for Copilot CLI installation)
-  - A GitHub Copilot subscription (Pro, Pro+, Business, or Enterprise)
+- **対象者**: スタンドアロンの GitHub Copilot CLI を使って開発ワークフローを効率化したい開発者
+- **学べること**: GitHub Copilot CLI をスタンドアロンのターミナルツールとしてインストールし、Issue の作成、コードの生成、コマンドラインでの対話的なコラボレーションに活用する方法
+- **作るもの**: Copilot CLI を使ってプロジェクトのセットアップ、Issue の管理、共同開発を行う Node.js 電卓アプリ
+- **前提条件**:
+  - 基本的なコマンドライン（CLI）操作の知識
+  - GitHub リポジトリの基本的な知識
+  - Node.js バージョン 22 以降（Copilot CLI のインストールに必要）
+  - GitHub Copilot サブスクリプション（Pro、Pro+、Business、または Enterprise）
 
-- **How long**: This exercise takes less than 60 minutes to complete.
+- **所要時間**: この演習は 60 分以内で完了できます。
 
-In this exercise, you will:
+この演習では、以下のことを行います：
 
-1. Learn to install the standalone Copilot CLI and use an issue template
-1. Use Copilot CLI to create an issue for a Node.js calculator app from an existing template
-1. Practice iterative development by working together with Copilot on the command line
+1. スタンドアロンの Copilot CLI のインストール方法と Issue テンプレートの使い方を学ぶ
+1. Copilot CLI を使って既存のテンプレートから Node.js 電卓アプリの Issue を作成する
+1. コマンドラインで Copilot と協力しながら反復的な開発を実践する
 
-### What's New in Copilot CLI
+### Copilot CLI の新機能
 
-GitHub Copilot CLI is a standalone terminal application with exciting features:
-- **Latest AI models**: Access the newest models from OpenAI and Google
-- **Custom agents**: Create specialized agent personas for your workflows using `.github/agents/`
-- **`/delegate` command**: Delegate tasks to Copilot coding agent which works autonomously
-- **`/share` command**: Save chat sessions as Markdown files or GitHub gists
-- **Better image support**: Add images via paste and drag-and-drop
-- **MCP server support**: Integrate with Model Context Protocol tools
-- **Improved reliability**: Better handling of long-running commands and enhanced automation with headless `-p` mode
+GitHub Copilot CLI は、以下の魅力的な機能を持つスタンドアロンのターミナルアプリケーションです：
+- **最新の AI モデル**: OpenAI や Google の最新モデルにアクセス可能
+- **カスタムエージェント**: `.github/agents/` を使用してワークフロー専用のエージェントペルソナを作成
+- **`/delegate` コマンド**: 自律的に動作する Copilot コーディングエージェントにタスクを委任
+- **`/share` コマンド**: チャットセッションを Markdown ファイルまたは GitHub Gist として保存
+- **強化された画像サポート**: ペーストやドラッグ＆ドロップで画像を追加
+- **MCP サーバーサポート**: Model Context Protocol ツールとの統合
+- **信頼性の向上**: 長時間実行コマンドの処理改善およびヘッドレス `-p` モードによる自動化の強化
 
 
-### How to start this exercise
+### 演習の開始方法
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+演習をあなたのアカウントにコピーするだけです。その後、お気に入りの Octocat（Mona）が最初のレッスンを準備するのに **約 20 秒** 待ってから、**ページを更新**してください。
 
 [![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=create-applications-with-the-copilot-cli&owner=%40me&name=skills-create-applications-with-the-copilot-cli&description=Exercise:+Create+Applications+with+the+Copilot+CLI&visibility=public)
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかない場合は？ 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+演習をコピーする際には、以下の設定を推奨します：
 
-- For owner, choose your personal account or an organization to host the repository.
+- オーナーには、リポジトリをホストする個人アカウントまたは組織を選択してください。
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+- プライベートリポジトリは Actions の使用時間を消費するため、パブリックリポジトリの作成を推奨します。
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+20 秒経っても演習の準備ができていない場合は、[Actions](../../actions) タブを確認してください。
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- ジョブが実行中かどうか確認してください。時間がかかる場合もあります。
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+- ページに失敗したジョブが表示されている場合は、Issue を送信してください。バグを発見しましたね！ 🐛
 
 </details>
 
 ---
 
-&copy; 2026 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2026 GitHub &bull; [行動規範](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT ライセンス](https://gh.io/mit)

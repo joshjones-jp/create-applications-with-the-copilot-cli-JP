@@ -1,50 +1,50 @@
-## Step 2: Work on the Calculator Issue with Copilot CLI
+## ステップ 2: Copilot CLI を使って電卓の Issue に取り組む
 
-With the issue created, Duck works with the standalone Copilot CLI interactively to start building the calculator application.
+Issue が作成されたので、Duck はスタンドアロンの Copilot CLI と対話的に作業して電卓アプリの構築を開始します。
 
-### 📖 Theory: Collaborative Development with Copilot CLI
+### 📖 理論: Copilot CLI を使った共同開発
 
-#### Interactive Development with Copilot CLI
+#### Copilot CLI を使ったインタラクティブな開発
 
-The standalone Copilot CLI (`copilot` command) provides a rich interactive experience for development:
+スタンドアロンの Copilot CLI（`copilot` コマンド）は、開発のための豊かなインタラクティブ体験を提供します：
 
-- Start a session by simply running `copilot` in your terminal
-- Have natural conversations about your code and get intelligent suggestions
-- Generate boilerplate code based on your requirements
-- Use the latest AI models for cutting-edge responses
-- `/share [file|gist] [path]` - Share session to markdown file or GitHub gist
+- ターミナルで `copilot` を実行するだけでセッションを開始
+- コードについて自然な会話をしてインテリジェントな提案を得る
+- 要件に基づいてボイラープレートコードを生成
+- 最先端のレスポンスのために最新の AI モデルを使用
+- `/share [file|gist] [path]` - セッションを Markdown ファイルまたは GitHub Gist として共有
 
-#### Custom Agents
+#### カスタムエージェント
 
-Copilot CLI supports custom agents that you can define in your repository:
+Copilot CLI はリポジトリで定義できるカスタムエージェントをサポートしています：
 
-- Create agent profiles in `.github/agents/` directory
-- Encode specialized prompts, tool selections, and workflows
-- Invoke agents using `/agent <name>` command
-- Great for documentation, infrastructure, security, or domain-specific tasks
+- `.github/agents/` ディレクトリにエージェントプロファイルを作成
+- 専門的なプロンプト、ツール選択、ワークフローをエンコード
+- `/agent <name>` コマンドでエージェントを呼び出す
+- ドキュメント、インフラ、セキュリティ、ドメイン固有のタスクに最適
 
-#### Delegating Tasks
+#### タスクの委任
 
-When you have larger tasks, you can delegate them to Copilot coding agent:
+より大きなタスクがある場合は、Copilot コーディングエージェントに委任できます：
 
-- Use `/delegate TASK-DESCRIPTION` to assign work
-- Copilot creates a new branch and draft pull request
-- The coding agent works autonomously in the background
-- Review the changes when complete
+- `/delegate タスクの説明` を使用して作業を割り当て
+- Copilot が新しいブランチとドラフトプルリクエストを作成
+- コーディングエージェントがバックグラウンドで自律的に作業
+- 完了したら変更をレビュー
 
 > [!NOTE]
-> References:
+> 参考リンク:
 >
-> - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
-> - [Custom agents in Copilot CLI](https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/)
-> - [About custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
+> - [GitHub Copilot CLI の使い方](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
+> - [Copilot CLI のカスタムエージェント](https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/)
+> - [カスタムエージェントについて](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
 
 > [!IMPORTANT]
-> If you have restarted your codespace you may need to run `copilot --allow-all --enable-all-github-mcp-tools` and then authenticate with GitHub again by running `!gh auth login` in the Copilot CLI.
+> Codespace を再起動した場合は、`copilot --allow-all --enable-all-github-mcp-tools` を実行してから、Copilot CLI 内で `!gh auth login` を実行して GitHub に再度認証する必要があります。
 
-### ⌨️ Activity: Create a New Branch for the Calculator App
+### ⌨️ アクティビティ: 電卓アプリ用の新しいブランチを作成する
 
-1. Start a new interactive Copilot CLI session (close the previous session with `/exit`):
+1. 新しいインタラクティブ Copilot CLI セッションを開始します（`/exit` で前のセッションを閉じます）：
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
    >
@@ -53,12 +53,12 @@ When you have larger tasks, you can delegate them to Copilot coding agent:
    > ```
 
 > [!NOTE]
-> The `--allow-all` option in the Copilot CLI enables all permissions at once:
-> it is equivalent to `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls`.
-> This allows the CLI to access any file path, use any tool, and access any URL without prompting for confirmation.
-> Use with caution, as it grants the CLI full access and automation capabilities.
+> Copilot CLI の `--allow-all` オプションはすべての権限を一度に有効にします：
+> `--allow-all-tools`、`--allow-all-paths`、`--allow-all-urls` と同等です。
+> これにより CLI は確認なしに任意のファイルパスにアクセスし、任意のツールを使用し、任意の URL にアクセスできます。
+> CLI に完全なアクセスと自動化機能が付与されるため、注意して使用してください。
 
-2. Create and push a new branch called `create-calc-app`:
+2. `create-calc-app` という名前の新しいブランチを作成してプッシュします：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -67,24 +67,24 @@ When you have larger tasks, you can delegate them to Copilot coding agent:
    > ```
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかない場合は？ 🤷</summary><br/>
 
-Use the `!` command in Copilot CLI to execute shell commands directly from your chat session. For example, to create and push the branch without leaving chat:
+Copilot CLI の `!` コマンドを使ってチャットセッションを離れずにシェルコマンドを直接実行できます。例えば、チャットからブランチを作成してプッシュするには：
 
  ```prompt
  !git checkout -b create-calc-app && git push -u origin create-calc-app
  ```
 
- Verify the current branch afterward:
+ その後、現在のブランチを確認します：
 
  ```prompt
  !git branch --show-current
  ```
 </details>
 
-### ⌨️ Activity: Generate Calculator Code with Copilot CLI based on an Image
+### ⌨️ アクティビティ: 画像を基に Copilot CLI で電卓コードを生成する
 
-1. Ask Copilot CLI to help you create the calculator functions based on the image and the GitHub issue created earlier:
+1. Copilot CLI に画像と以前に作成した GitHub Issue を基に電卓関数の作成を依頼します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -96,7 +96,7 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > Make sure the calculator is commented with the operations it supports.
    > ```
 
-   1. Optional alternatively, use the headless mode with a prompt:
+   1. 代替として、プロンプト付きのヘッドレスモードを使用することもできます：
 
       > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
       >
@@ -109,9 +109,9 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
       > ```
 
 > [!NOTE]
-> While this example uses an image of a web JavaScript calculator, it demonstrates how you can use files (including images) with the Copilot CLI to provide context for your requests.
+> この例では Web JavaScript 電卓の画像を使用していますが、Copilot CLI でファイル（画像を含む）を使ってリクエストにコンテキストを提供する方法を示しています。
 
-2. Run and test your calculator functions by asking Copilot CLI:
+2. Copilot CLI に電卓関数の実行とテストを依頼します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -120,7 +120,7 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > shown in the image @images/calc-basic-operations.png.
    > ```
 
-3. Ask Copilot CLI to create comprehensive tests for the calculator functions:
+3. Copilot CLI に電卓関数の包括的なテストの作成を依頼します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -136,9 +136,9 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > ```
 
 > [!NOTE]
-> Hit ctrl+o to see output of the passed tests that Copilot CLI ran for you!
+> ctrl+o を押すと Copilot CLI が実行したテストの出力を確認できます！
   
-4. Once satisfied with the code, commit your changes through Copilot CLI:
+4. コードに満足したら、Copilot CLI を通じて変更をコミットします：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -149,21 +149,21 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > Push the changes
    > ```
 
-5. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+5. Mona が作業を確認してフィードバックと次のレッスンを共有するまで少し待ちます。
 
 > [!TIP]
-> You can paste or drag-and-drop images into Copilot CLI to provide visual context for your questions!
+> 画像をペーストしたりドラッグ＆ドロップして Copilot CLI に視覚的なコンテキストを提供できます！
 
 > [!NOTE]
-> Pushing your changes will trigger the workflow to verify your work and prepare the next step!
+> 変更をプッシュすると、作業を確認して次のステップを準備するワークフローがトリガーされます！
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかない場合は？ 🤷</summary><br/>
 
-- Make sure you're in the repository directory when running commands
-- The `copilot` command requires Node.js 22+ to be installed
-- If authentication fails, run `copilot` and follow the login prompts
-- You can also edit the calculator.js file manually based on Copilot's suggestions
-- Remember to export your functions using `module.exports`
+- コマンドを実行するときはリポジトリのディレクトリにいることを確認してください
+- `copilot` コマンドには Node.js 22 以降のインストールが必要です
+- 認証に失敗した場合は、`copilot` を実行してログインプロンプトに従ってください
+- Copilot の提案を基に calculator.js ファイルを手動で編集することもできます
+- `module.exports` を使って関数をエクスポートすることを忘れずに
 
 </details>

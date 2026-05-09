@@ -1,56 +1,55 @@
-## Step 4: Create, Review, and Merge Your Pull Request
+## ステップ 4: プルリクエストの作成、レビュー、マージ
 
-Duck is ready to finalize the development work by creating a pull request, linking it to both issues, getting a review from Copilot, and merging the changes—all from the command line with Copilot CLI.
+Duck は、プルリクエストの作成、両方の Issue へのリンク、Copilot によるレビューの取得、変更のマージ—これらすべてを Copilot CLI を使ってコマンドラインから行うことで、開発作業を完成させる準備が整いました。
 
-### 📖 Theory: Pull Requests and Code Review with Copilot CLI
+### 📖 理論: Copilot CLI を使ったプルリクエストとコードレビュー
 
-#### Understanding Pull Requests (PRs)
+#### プルリクエスト（PR）について
 
-Pull requests are the standard way to propose changes in collaborative development:
+プルリクエストは共同開発で変更を提案する標準的な方法です：
 
-- They allow team members to review code before merging
-- They maintain a history of changes and decisions
-- They can be linked to issues for better project tracking
-- They enable automated testing and validation through CI/CD
+- チームメンバーがマージ前にコードをレビューできる
+- 変更と決定の履歴を維持する
+- プロジェクト追跡の改善のために Issue にリンクできる
+- CI/CD による自動テストと検証を可能にする
 
-#### Connecting PRs to Issues
+#### PR を Issue に接続する
 
-Linking pull requests to issues helps with project management:
+プルリクエストを Issue にリンクすることはプロジェクト管理に役立ちます：
 
-- Closes issues automatically when the PR is merged
-- Provides traceability between work items and code changes
-- Helps track progress through the development lifecycle
-- Improves team communication about what's being built
+- PR がマージされると Issue を自動的にクローズする
+- 作業項目とコードの変更間のトレーサビリティを提供する
+- 開発ライフサイクルを通じた進捗の追跡を助ける
+- 何が構築されているかについてのチームコミュニケーションを改善する
 
-#### Code Review with AI Assistance
+#### AI を活用したコードレビュー
 
-GitHub Copilot can act as a reviewer to:
+GitHub Copilot はレビュアーとして以下を行えます：
 
-- Suggest improvements to code quality
-- Identify potential bugs or edge cases
-- Recommend best practices and design patterns
-- Provide constructive feedback on implementation
+- コード品質の改善を提案
+- 潜在的なバグやエッジケースを特定
+- ベストプラクティスとデザインパターンを推奨
+- 実装に対して建設的なフィードバックを提供
 
-The Copilot CLI enables you to:
+Copilot CLI を使うと以下が可能になります：
 
-- Create pull requests directly from the terminal
-- Request reviews from Copilot or team members
-- Merge changes without leaving the CLI
-- Automate the entire workflow for faster iteration
+- ターミナルから直接プルリクエストを作成
+- Copilot またはチームメンバーにレビューをリクエスト
+- CLI を離れることなく変更をマージ
+- より速い反復のためにワークフロー全体を自動化
 
-#### References
+#### 参考リンク
 
-- [Creating Pull Requests with GitHub CLI](https://cli.github.com/manual/gh_pr_create)
-- [Linking Issues and PRs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
-- [GitHub Copilot as a Code Reviewer](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review)
+- [GitHub CLI でプルリクエストを作成する](https://cli.github.com/manual/gh_pr_create)
+- [Issue と PR のリンク](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+- [コードレビュアーとしての GitHub Copilot](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review)
 
 > [!IMPORTANT]
-> If you have restarted your codespace you may need to run `copilot --allow-all` and then authenticate with GitHub again by running `!gh auth login` in your terminal,
-> or use `!gh auth login` from within the Copilot CLI session.
+> Codespace を再起動した場合は、`copilot --allow-all` を実行してから、ターミナルで `!gh auth login` を実行するか、Copilot CLI セッション内で `!gh auth login` を実行して GitHub に再度認証する必要があります。
 
-### ⌨️ Activity: Complete Your Pull Request Workflow
+### ⌨️ アクティビティ: プルリクエストワークフローを完了する
 
-1. Start an interactive Copilot CLI session (if not already in a session):
+1. インタラクティブな Copilot CLI セッションを開始します（まだセッション中でない場合）：
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
    >
@@ -58,7 +57,7 @@ The Copilot CLI enables you to:
    > copilot --allow-all --enable-all-github-mcp-tools
    > ```
 
-2. Create a pull request for your changes and add Copilot as a reviewer:
+2. 変更のプルリクエストを作成し、Copilot をレビュアーとして追加します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -70,7 +69,7 @@ The Copilot CLI enables you to:
    > List the PR link when it is completely created
    > ```
 
-3. Attach the pull request to both issues you created earlier:
+3. プルリクエストを以前に作成した両方の Issue に紐付けます：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -79,7 +78,7 @@ The Copilot CLI enables you to:
    > "Add more operations" issues so they close automatically when merged.
    > ```
 
-1. Merge the pull request after Copilot's review is complete:
+1. Copilot のレビューが完了したらプルリクエストをマージします：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -88,11 +87,11 @@ The Copilot CLI enables you to:
    > ```
 
 > [!NOTE]
-> When you merge a PR that's linked to issues using "Closes #<issue-number>",
-> GitHub automatically closes those issues. The squash merge option keeps your
-> main branch history clean.
+> "Closes #<issue-number>" を使って Issue にリンクされた PR をマージすると、
+> GitHub はそれらの Issue を自動的にクローズします。スカッシュマージオプションを使うと
+> メインブランチの履歴がきれいに保たれます。
 
-4. Verify that both issues are now closed:
+4. 両方の Issue が現在クローズされていることを確認します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -101,22 +100,22 @@ The Copilot CLI enables you to:
    > and "Add more operations" issues are now closed.
    > ```
 
-5. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+5. Mona が作業を確認してフィードバックと次のレッスンを共有するまで少し待ちます。
 
 > [!TIP]
-> Use `/share gist` in your Copilot CLI session to save your GitHub Skills exercise session
-> as a GitHub gist for documentation and future reference!
+> Copilot CLI セッションで `/share gist` を使って、GitHub Skills 演習セッションを
+> ドキュメントと将来の参照のために GitHub Gist として保存しましょう！
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかない場合は？ 🤷</summary><br/>
 
-- Make sure you've committed and pushed all your changes before creating the PR
-- Verify your GitHub authentication with `gh auth status` or `!gh auth status` in Copilot CLI
-- If the PR creation fails, check that you're on a branch different from main/master
-- To manually link an issue, edit the PR description to include "Closes #<issue-number>"
-- You can view PR details with `!gh pr view` or `!gh pr list` to see your PRs
-- For issues that don't close automatically, link them manually in the GitHub web interface
-- Remember to check that Copilot's review has been submitted before merging
-- Use `!gh pr merge --squash` to merge with a clean history
+- PR を作成する前にすべての変更をコミットしてプッシュしたか確認してください
+- `gh auth status` または Copilot CLI 内で `!gh auth status` を使って GitHub 認証を確認してください
+- PR の作成に失敗する場合は、main/master とは異なるブランチにいることを確認してください
+- Issue を手動でリンクするには、PR の説明を編集して「Closes #<issue-number>」を含めてください
+- `!gh pr view` または `!gh pr list` で PR の詳細を確認できます
+- 自動的にクローズされない Issue は GitHub の Web インターフェースで手動でリンクしてください
+- マージ前に Copilot のレビューが送信されたことを確認してください
+- `!gh pr merge --squash` を使うときれいな履歴でマージできます
 
 </details>

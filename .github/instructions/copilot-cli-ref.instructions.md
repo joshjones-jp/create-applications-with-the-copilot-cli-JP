@@ -2,90 +2,90 @@
 applyTo: "**/**"
 ---
 
-# Prompt guidance
+# プロンプトガイダンス
 
-Stick to the prompts and context being provided. Don't jump ahead to doing steps.
-Only add, commit, and push files when prompted by the user.
+提供されたプロンプトとコンテキストに従ってください。先のステップに進まないでください。
+ユーザーに指示されたときのみ、ファイルの追加、コミット、プッシュを行ってください。
 
-# New features
+# 新機能
 
-Use .github/ISSUE_TEMPLATE/feature_request.md to request all new features for calculator.js.
+calculator.js へのすべての新機能のリクエストには .github/ISSUE_TEMPLATE/feature_request.md を使用してください。
 
-# Global shortcuts
-
-```
-@             mention files, include contents in context
-Esc           cancel the current operation
-!             execute command in your local shell (bypass Copilot)
-ctrl+c        cancel operation / clear input / exit
-ctrl+d        shutdown
-ctrl+l        clear the screen
-```
-
-## Expand timeline content shortcuts
+# グローバルショートカット
 
 ```
-Ctrl+o - expand all timeline/collapse timeline
-Ctrl+r - expand recent timeline/collapse timeline
+@             ファイルをメンション、コンテキストに内容を含める
+Esc           現在の操作をキャンセル
+!             ローカルシェルでコマンドを実行（Copilot をバイパス）
+ctrl+c        操作のキャンセル / 入力のクリア / 終了
+ctrl+d        シャットダウン
+ctrl+l        画面のクリア
 ```
 
-## Motion shortcuts
+## タイムラインコンテンツの展開ショートカット
 
 ```
-Ctrl+a - move to the beginning of the line
-Ctrl+e - move to the end of the line
-Ctrl+h - delete previous character
-Ctrl+w - delete previous word
-Ctrl+u - delete from cursor to beginning of line
-Ctrl+k - delete from cursor to end of line
-Meta+←/→ - move cursor by word
+Ctrl+o - タイムラインをすべて展開/折りたたむ
+Ctrl+r - 最近のタイムラインを展開/折りたたむ
 ```
 
-Use ↑↓ keys to navigate command history
+## モーションショートカット
 
-## Instruction sources
+```
+Ctrl+a - 行の先頭に移動
+Ctrl+e - 行の末尾に移動
+Ctrl+h - 前の文字を削除
+Ctrl+w - 前の単語を削除
+Ctrl+u - カーソルから行頭まで削除
+Ctrl+k - カーソルから行末まで削除
+Meta+←/→ - 単語単位でカーソルを移動
+```
 
-Respects instructions sourced from various locations:
+コマンド履歴のナビゲーションには ↑↓ キーを使用してください
 
-- `.github/instructions/**/*.instructions.md` (in git root and cwd)
+## 指示のソース
+
+以下の場所からの指示を尊重します：
+
+- `.github/instructions/**/*.instructions.md`（git ルートおよび cwd）
 - `.github/copilot-instructions.md`
-- `AGENTS.md` (in git root and cwd)
+- `AGENTS.md`（git ルートおよび cwd）
 - `CLAUDE.md`
 - `GEMINI.md`
 - `$HOME/.copilot/copilot-instructions.md`
-- Additional directories via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`
+- `COPILOT_CUSTOM_INSTRUCTIONS_DIRS` による追加ディレクトリ
 
-## Learn more
+## 詳細を学ぶ
 
-To learn about what I can do:
+できることについて：
 
-- Ask me "What can you do?"
-- Or visit: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli
+- 「何ができますか？」と聞いてみてください
+- または以下を参照してください：https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli
 
-## Available commands
+## 利用可能なコマンド
 
 ```
-/add-dir <directory> - Add a directory to the allowed list for file access
-/agent - Browse and select from available agents (if any)
-/clear - Clear the conversation history
-/compact - Summarize conversation history to reduce context window usage
-/context - Show context window token usage and visualization
-/cwd [directory] - Change working directory or show current directory
-/delegate <prompt> - Delegate changes to remote repository with AI-generated PR
-/exit, /quit - Exit the CLI
-/share [file|gist] [path] - Share session to markdown file or GitHub gist
-/feedback - Provide feedback about the CLI
-/help - Show help for interactive commands
-/list-dirs - Display all allowed directories for file access
-/login - Log in to Copilot
-/logout - Log out of Copilot
-/mcp [show|add|edit|delete|disable|enable] [server-name] - Manage MCP server configuration
-/model [model] - Select AI model to use
-/reset-allowed-tools - Reset the list of allowed tools
-/session - Show information about the current CLI session
-/skills [list|info|add|remove|reload] [args...] - Manage skills for enhanced capabilities
-/terminal-setup - Configure terminal for multiline input support (Shift+Enter and Ctrl+Enter)
-/theme [show|set|list] [auto|dark|light] - View or configure terminal theme
-/usage - Display session usage metrics and statistics
-/user [show|list|switch] - Manage GitHub user list
+/add-dir <directory> - ファイルアクセスの許可リストにディレクトリを追加
+/agent - 利用可能なエージェントを参照して選択（存在する場合）
+/clear - 会話履歴をクリア
+/compact - コンテキストウィンドウの使用を減らすために会話履歴を要約
+/context - コンテキストウィンドウのトークン使用量と視覚化を表示
+/cwd [directory] - 作業ディレクトリを変更または現在のディレクトリを表示
+/delegate <prompt> - AI が生成した PR でリモートリポジトリに変更を委任
+/exit, /quit - CLI を終了
+/share [file|gist] [path] - セッションを Markdown ファイルまたは GitHub Gist として共有
+/feedback - CLI についてフィードバックを提供
+/help - インタラクティブコマンドのヘルプを表示
+/list-dirs - ファイルアクセスの許可されたディレクトリをすべて表示
+/login - Copilot にログイン
+/logout - Copilot からログアウト
+/mcp [show|add|edit|delete|disable|enable] [server-name] - MCP サーバー設定を管理
+/model [model] - 使用する AI モデルを選択
+/reset-allowed-tools - 許可されたツールのリストをリセット
+/session - 現在の CLI セッションに関する情報を表示
+/skills [list|info|add|remove|reload] [args...] - 拡張機能のためのスキルを管理
+/terminal-setup - マルチライン入力サポートのためのターミナルを設定（Shift+Enter と Ctrl+Enter）
+/theme [show|set|list] [auto|dark|light] - ターミナルテーマを表示または設定
+/usage - セッション使用量のメトリクスと統計を表示
+/user [show|list|switch] - GitHub ユーザーリストを管理
 ```

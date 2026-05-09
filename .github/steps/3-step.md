@@ -1,23 +1,23 @@
-## Step 3: Expand Calculator Functionality
+## ステップ 3: 電卓の機能を拡張する
 
-Duck wants to expand the calculator with additional operations by creating a new issue and working with Copilot CLI to implement the enhancements.
+Duck は新しい Issue を作成して Copilot CLI と共同作業することで、電卓に追加の操作を実装して機能を拡張したいと考えています。
 
-### 📖 Theory: Iterative Development with Copilot CLI
+### 📖 理論: Copilot CLI を使った反復的な開発
 
-#### Maintaining Momentum with Copilot CLI
+#### Copilot CLI で開発のモメンタムを維持する
 
-The standalone Copilot CLI helps maintain development momentum by:
+スタンドアロンの Copilot CLI は以下によって開発のモメンタムを維持するのに役立ちます：
 
-- Quickly generating code for new features using the latest AI models
-- Suggesting best practices and patterns
-- Helping debug and test new functionality
-- Reducing context switching by keeping you in the terminal
-- Handling long-running shell commands more efficiently
-- Supporting improved automation with the headless `-p` mode
+- 最新の AI モデルを使用して新機能のコードを素早く生成
+- ベストプラクティスとパターンを提案
+- 新機能のデバッグとテストを支援
+- ターミナル内に留まることでコンテキストの切り替えを削減
+- 長時間実行のシェルコマンドをより効率的に処理
+- ヘッドレス `-p` モードによる改善された自動化をサポート
 
-#### Delegating Larger Tasks
+#### より大きなタスクの委任
 
-For more complex tasks, you can use the `/delegate` command exampled below to assign work to the Copilot coding agent:
+より複雑なタスクには、以下の例のように `/delegate` コマンドを使って Copilot コーディングエージェントに作業を割り当てることができます：
 
 > ```bash
 > copilot
@@ -27,39 +27,39 @@ For more complex tasks, you can use the `/delegate` command exampled below to as
 > /delegate Add modulo, exponentiation, and square root functions to calculator.js with proper error handling
 > ```
 
-Copilot coding agent will:
+Copilot コーディングエージェントは以下を行います：
 
-1. Create a new branch automatically
-2. Open a draft pull request
-3. Work on the task autonomously
-4. Stream output to your terminal
-5. Request your review when complete
+1. 自動的に新しいブランチを作成
+2. ドラフトプルリクエストをオープン
+3. タスクを自律的に実行
+4. ターミナルに出力をストリーム
+5. 完了したらレビューをリクエスト
 
 > [!NOTE]
-> Using the `/delegate` command to leverage the Copilot Coding Agent (CCA) will consume premium requests from your GitHub Copilot subscription. Copilot CLI can be also used with regular models, which don't use premium requests.
+> `/delegate` コマンドを使って Copilot コーディングエージェント（CCA）を活用すると、GitHub Copilot サブスクリプションのプレミアムリクエストが消費されます。Copilot CLI はプレミアムリクエストを使用しない通常のモデルでも使用できます。
 
-#### Testing and Improvement Workflows
+#### テストと改善のワークフロー
 
-As you add features, Copilot CLI can help you:
+機能を追加するにあたって、Copilot CLI は以下をサポートします：
 
-- Generate test cases for new operations
-- Suggest edge cases to consider
-- Create documentation
-- Refactor code for better maintainability
-- Save and share your development sessions using `/share`
+- 新しい操作のテストケースを生成
+- 考慮すべきエッジケースを提案
+- ドキュメントを作成
+- より良いメンテナンス性のためにコードをリファクタリング
+- `/share` を使って開発セッションを保存・共有
 
 > [!IMPORTANT]
-> If you have restarted your codespace you may need to run `copilot --allow-all --enable-all-github-mcp-tools` and then authenticate with GitHub again by running `!gh auth login` from within the Copilot CLI session.
+> Codespace を再起動した場合は、`copilot --allow-all --enable-all-github-mcp-tools` を実行してから、Copilot CLI セッション内で `!gh auth login` を実行して GitHub に再度認証する必要があります。
 
 > [!NOTE]
-> The `--allow-all` option in the Copilot CLI enables all permissions at once:
-> it is equivalent to `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls`.
-> This allows the CLI to access any file path, use any tool, and access any URL without prompting for confirmation.
-> Use with caution, as it grants the CLI full access and automation capabilities.
+> Copilot CLI の `--allow-all` オプションはすべての権限を一度に有効にします：
+> `--allow-all-tools`、`--allow-all-paths`、`--allow-all-urls` と同等です。
+> これにより CLI は確認なしに任意のファイルパスにアクセスし、任意のツールを使用し、任意の URL にアクセスできます。
+> CLI に完全なアクセスと自動化機能が付与されるため、注意して使用してください。
 
-### ⌨️ Activity: Add More Operations to the Calculator
+### ⌨️ アクティビティ: 電卓に更なる操作を追加する
 
-1. Start an interactive Copilot CLI session (if not already in a session):
+1. インタラクティブな Copilot CLI セッションを開始します（まだセッション中でない場合）：
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
    >
@@ -67,7 +67,7 @@ As you add features, Copilot CLI can help you:
    > copilot --allow-all --enable-all-github-mcp-tools
    > ```
 
-1. Ask Copilot CLI to help you create another issue for expanding the calculator:
+1. Copilot CLI に電卓を拡張するための別の Issue の作成を依頼します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -82,7 +82,7 @@ As you add features, Copilot CLI can help you:
    > List the issue link when complete
    > ```
 
-1. Work with Copilot CLI to implement the new operations:
+1. Copilot CLI と共同作業して新しい操作を実装します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -93,7 +93,7 @@ As you add features, Copilot CLI can help you:
    > 3. squareRoot(n) - returns the square root of n with error handling for negative numbers
    > ```
 
-   1. Optional alternatively, use the headless mode:
+   1. 代替として、ヘッドレスモードを使用することもできます：
 
       > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
       >
@@ -104,7 +104,7 @@ As you add features, Copilot CLI can help you:
       > 3. squareRoot(n) - returns the square root of n with error handling for negative numbers"
       > ```
 
-1. Test your new functions and add tests:
+1. 新しい関数をテストし、テストを追加します：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -118,7 +118,7 @@ As you add features, Copilot CLI can help you:
    > - Make sure all tests run and pass
    > ```
 
-1. Commit your changes:
+1. 変更をコミットします：
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -129,19 +129,19 @@ As you add features, Copilot CLI can help you:
    > Push the changes
    > ```
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+1. Mona が作業を確認してフィードバックと次のレッスンを共有するまで少し待ちます。
 
 > [!TIP]
-> Use `/share gist` in your Copilot CLI session to save your GitHub Skills exercise session as a GitHub gist for future reference!
+> Copilot CLI セッションで `/share gist` を使って、GitHub Skills 演習セッションを後から参照できるように GitHub Gist として保存しましょう！
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>うまくいかない場合は？ 🤷</summary><br/>
 
-- Make sure your issue title includes "Calculator" or "Operations"
-- The calculator.js file should export functions that can be required/imported
-- You can test operations manually using Node.js REPL: `node` then type your code
-- For square root of negative numbers, consider returning `NaN` or throwing an error
-- Remember to commit and push any code changes you make
-- Use `copilot --help` to see all available command options
+- Issue タイトルに「Calculator」または「Operations」が含まれているか確認してください
+- calculator.js ファイルは require/import できる関数をエクスポートする必要があります
+- Node.js REPL を使って手動で操作をテストできます：`node` を実行してコードを入力
+- 負の数の平方根には `NaN` を返すかエラーをスローすることを検討してください
+- コードの変更をコミットしてプッシュすることを忘れずに
+- `copilot --help` で利用可能なすべてのコマンドオプションを確認できます
 
 </details>
